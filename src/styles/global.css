@@ -1,0 +1,14 @@
+html, body {
+    min-height: 100%;
+}
+
+body {
+  /* background: rgb(199, 199, 199); */
+  background: radial-gradient( at
+    top left,
+    rgba(199, 199, 199, 1) 0%,
+    rgba(240, 240, 240, 1) 52%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background-repeat: no-repeat;
+}

@@ -1,10 +1,12 @@
 import React from 'react'
-import Navbar from './Navbar';
+import Navigation from './Navigation';
+import '../styles/bootstrap.min.css'
+import '../styles/global.css'
 
 export default function Layout({children}) {
     return (
         <div className="layout">
-            <Navbar />
+            <Navigation />
             <div className="content">
                 {children}
             </div>
