@@ -6,10 +6,19 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `articles`,
+        path: `${__dirname}/src/articles/`,
+      },
+    },
+  ],
   siteMetadata: {
     title: "Austin Cole",
     description: "Blog",
-    copyright: "This website is copyright 2021"
-  }
+    copyright: "This website is copyright 2021",
+  },
 }
