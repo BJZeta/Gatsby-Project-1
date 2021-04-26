@@ -1,13 +1,25 @@
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { Nav, Navbar } from "react-bootstrap"
-// import { navigation } from "../styles/navbar.module.css"
 
 export default function Navigation() {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        id
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
+  const { title } = data.site.siteMetadata
+
   return (
     <Navbar bg="light" expand="lg" variant="light">
       <Link className="navbar-brand ml-3" to="/">
-        <h2>Austin Cole</h2>
+        <h2>{title}</h2>
       </Link>
       <Navbar.Toggle aria-controls="navbar-items" />
       <Navbar.Collapse id="navbar-items">
